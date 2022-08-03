@@ -1,0 +1,6 @@
+framework module Pods_TileFeed {
+  umbrella header "Pods-TileFeed-umbrella.h"
+
+  export *
+  module * { export * }
+}

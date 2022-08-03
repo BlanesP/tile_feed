@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ShoppingTileEntity" representedClassName="ShoppingTileEntity" parentEntity="TileEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="cartItems" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromDataTransformer" customClassName="[String]"/>
+    </entity>
+    <entity name="TileEntity" representedClassName="TileEntity" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="ranking" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="subtitle" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="URLTileEntity" representedClassName="URLTileEntity" parentEntity="TileEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="type" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="url" attributeType="URI"/>
+    </entity>
+    <elements>
+        <element name="ShoppingTileEntity" positionX="-36" positionY="36" width="128" height="44"/>
+        <element name="TileEntity" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="URLTileEntity" positionX="-54" positionY="18" width="128" height="59"/>
+    </elements>
+</model>
