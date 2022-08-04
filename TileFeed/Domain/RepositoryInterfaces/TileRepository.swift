@@ -13,5 +13,5 @@ protocol TileRepository {
     func getLastRefreshDate() -> Date?
     func fetchTiles(refresh: Bool) -> AnyPublisher<[Tile], Error>
     func saveTiles(_ tiles: [Tile]) -> AnyPublisher<[Tile], Error>
-    func addCartItem(_ item: String, to shoppingTile: ShoppingTile) -> AnyPublisher<[String], Error>
+    func addCartItem(_ item: String, to tileId: UUID) -> AnyPublisher<ShoppingTile, Error>
 }

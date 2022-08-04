@@ -32,7 +32,7 @@ extension GetTilesUseCaseImpl: GetTilesUseCase {
 
 private extension GetTilesUseCaseImpl {
     var shouldRefresh: Bool {
-        guard let daysFromToday = repository.getLastRefreshDate()?.daysFromToday else {
+        guard let daysFromToday = repository.getLastRefreshDate()?.daysBetweenToday else {
             return true
         }
         return daysFromToday > 0

@@ -10,13 +10,14 @@ import Foundation
 //MARK: - Instance
 
 extension Date {
-    var daysFromToday: Int? {
+    var daysBetweenToday: Int? {
         let calendar = Calendar.current
         let date1 = calendar.startOfDay(for: self)
         let date2 = calendar.startOfDay(for: Date())
 
         let components = calendar.dateComponents([.day], from: date1, to: date2)
-        return components.day
+        guard let day = components.day else { return nil }
+        return abs(day)
     }
 }
 

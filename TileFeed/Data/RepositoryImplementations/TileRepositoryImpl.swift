@@ -16,10 +16,12 @@ private extension String {
 final class TileRepositoryImpl: Logger {
     let alamofireDataSource: AlamofireDataSource
     let coreDataSource: CoreDataSource
+    let userDefaults: UserDefaults
 
-    init(alamofireDataSource: AlamofireDataSource, coreDataSource: CoreDataSource) {
+    init(alamofireDataSource: AlamofireDataSource, coreDataSource: CoreDataSource, userDefaults: UserDefaults) {
         self.alamofireDataSource = alamofireDataSource
         self.coreDataSource = coreDataSource
+        self.userDefaults = userDefaults
     }
 }
 
@@ -28,13 +30,13 @@ extension TileRepositoryImpl: TileRepository {
     func updateLastRefreshDate(to date: Date) {
         log("Saving refresh date...")
 
-        return UserDefaults.standard.set(date, forKey: .lastRefreshDateKey)
+        return userDefaults.set(date, forKey: .lastRefreshDateKey)
     }
 
     func getLastRefreshDate() -> Date? {
         log("Getting refresh date...")
 
-        return UserDefaults.standard.object(forKey: .lastRefreshDateKey) as? Date
+        return userDefaults.object(forKey: .lastRefreshDateKey) as? Date
     }
 
     //MARK: Tiles
@@ -75,11 +77,15 @@ extension TileRepositoryImpl: TileRepository {
             .eraseToAnyPublisher()
     }
 
-    func addCartItem(_ item: String, to shoppingTile: ShoppingTile) -> AnyPublisher<[String], Error> {
+    func addCartItem(_ item: String, to tileId: UUID) -> AnyPublisher<ShoppingTile, Error> {
         log("Adding cart item...")
 
+        guard !item.isEmpty else {
+            return Fail(error: BasicError(message: "Empty item")).eraseToAnyPublisher()
+        }
+
         let request: NSFetchRequest<ShoppingTileEntity> = ShoppingTileEntity.fetchRequest()
-        request.predicate = NSPredicate(format: "id == %@", shoppingTile.id as NSUUID)
+        request.predicate = NSPredicate(format: "id == %@", tileId as NSUUID)
 
         return coreDataSource
             .updateTile(request: request, action: { entity in
@@ -87,7 +93,7 @@ extension TileRepositoryImpl: TileRepository {
                 items.insert(item, at: 0)
                 entity.cartItems = items
             })
-            .map { $0.cartItems ?? [] }
+            .tryMap { try ShoppingTile(from: $0) }
             .eraseToAnyPublisher()
     }
 }

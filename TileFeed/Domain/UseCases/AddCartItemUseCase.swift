@@ -6,9 +6,10 @@
 //
 
 import Combine
+import Foundation
 
 protocol AddCartItemUseCase {
-    func execute(cartItem: String, tile: ShoppingTile) -> AnyPublisher<[String], Error>
+    func execute(cartItem: String, tileId: UUID) -> AnyPublisher<ShoppingTile, Error>
 }
 
 final class AddCartItemUseCaseImpl: Logger {
@@ -20,9 +21,9 @@ final class AddCartItemUseCaseImpl: Logger {
 }
 
 extension AddCartItemUseCaseImpl: AddCartItemUseCase {
-    func execute(cartItem: String, tile: ShoppingTile) -> AnyPublisher<[String], Error> {
+    func execute(cartItem: String, tileId: UUID) -> AnyPublisher<ShoppingTile, Error> {
         log("Executing UseCase...")
 
-        return repository.addCartItem(cartItem, to: tile)
+        return repository.addCartItem(cartItem, to: tileId)
     }
 }

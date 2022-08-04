@@ -52,10 +52,9 @@ extension TileDetailViewModel {
 
 private extension TileDetailViewModel {
     func addCartItem(_ cartItem: String) {
-        guard var shoppingTile = tile as? ShoppingTile else { return }
 
         addCartItemUC
-            .execute(cartItem: cartItem, tile: shoppingTile)
+            .execute(cartItem: cartItem, tileId: tile.id)
             .subscribe(on: .global)
             .receive(on: .main)
             .sink(
@@ -63,10 +62,9 @@ private extension TileDetailViewModel {
                     if case .failure = completion {
                         self?.output.send(.error)
                     }
-                }, receiveValue: { [weak self] cartItems in
-                    shoppingTile.cartItems = cartItems
-                    self?.tile = shoppingTile
-                    self?.onTileChanged?.send(shoppingTile)
+                }, receiveValue: { [weak self] updatedTile in
+                    self?.tile = updatedTile
+                    self?.onTileChanged?.send(updatedTile)
                 }
             )
             .store(in: &cancellables)

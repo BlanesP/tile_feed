@@ -44,6 +44,15 @@
 		1E910EED28966964009E0BF1 /* View+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E910EEC28966964009E0BF1 /* View+Utils.swift */; };
 		1EB015A928980DE200E6F746 /* CustomAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB015A828980DE200E6F746 /* CustomAsyncImage.swift */; };
 		1EB015AC28981DC900E6F746 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB015AB28981DC900E6F746 /* Logger.swift */; };
+		1EC40425289BCA9A0008AE8A /* TileListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC40424289BCA9A0008AE8A /* TileListViewModelTests.swift */; };
+		1EC40427289BCAB10008AE8A /* GetTilesUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC40426289BCAB10008AE8A /* GetTilesUseCaseMock.swift */; };
+		1EC40429289BD04E0008AE8A /* AddCartItemUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC40428289BD04E0008AE8A /* AddCartItemUseCaseMock.swift */; };
+		1EC4042B289BD0C50008AE8A /* TileDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4042A289BD0C50008AE8A /* TileDetailViewModelTests.swift */; };
+		1EC4042E289BD4B80008AE8A /* DateUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4042D289BD4B80008AE8A /* DateUtilsTests.swift */; };
+		1EF79059289BA89900C34A83 /* DateMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF79058289BA89900C34A83 /* DateMocks.swift */; };
+		1EF7905E289BA9ED00C34A83 /* AddCartItemUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7905D289BA9ED00C34A83 /* AddCartItemUseCaseTests.swift */; };
+		1EF79060289BAA1900C34A83 /* TileRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7905F289BAA1900C34A83 /* TileRepositoryMock.swift */; };
+		1EF79062289BAD2000C34A83 /* GetTilesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF79061289BAD2000C34A83 /* GetTilesUseCaseTests.swift */; };
 		6EE579BD635FCBEB90F752A5 /* Pods_TileFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F65E71884616EF3D00D5564 /* Pods_TileFeed.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +107,15 @@
 		1E910EEC28966964009E0BF1 /* View+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Utils.swift"; sourceTree = "<group>"; };
 		1EB015A828980DE200E6F746 /* CustomAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAsyncImage.swift; sourceTree = "<group>"; };
 		1EB015AB28981DC900E6F746 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		1EC40424289BCA9A0008AE8A /* TileListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileListViewModelTests.swift; sourceTree = "<group>"; };
+		1EC40426289BCAB10008AE8A /* GetTilesUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTilesUseCaseMock.swift; sourceTree = "<group>"; };
+		1EC40428289BD04E0008AE8A /* AddCartItemUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCartItemUseCaseMock.swift; sourceTree = "<group>"; };
+		1EC4042A289BD0C50008AE8A /* TileDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileDetailViewModelTests.swift; sourceTree = "<group>"; };
+		1EC4042D289BD4B80008AE8A /* DateUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtilsTests.swift; sourceTree = "<group>"; };
+		1EF79058289BA89900C34A83 /* DateMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateMocks.swift; sourceTree = "<group>"; };
+		1EF7905D289BA9ED00C34A83 /* AddCartItemUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCartItemUseCaseTests.swift; sourceTree = "<group>"; };
+		1EF7905F289BAA1900C34A83 /* TileRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileRepositoryMock.swift; sourceTree = "<group>"; };
+		1EF79061289BAD2000C34A83 /* GetTilesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTilesUseCaseTests.swift; sourceTree = "<group>"; };
 		D0473985DB08F0FEEEDD3BCC /* Pods-TileFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TileFeed.release.xcconfig"; path = "Target Support Files/Pods-TileFeed/Pods-TileFeed.release.xcconfig"; sourceTree = "<group>"; };
 		D84264D79DC3AE2F285ED7D7 /* Pods-TileFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TileFeed.debug.xcconfig"; path = "Target Support Files/Pods-TileFeed/Pods-TileFeed.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,8 +142,8 @@
 		1E5CBEAC289907A600DB5A9D /* TileFeedTests */ = {
 			isa = PBXGroup;
 			children = (
+				1EF7905B289BA8B800C34A83 /* UnitTests */,
 				1E5CBEB4289907B900DB5A9D /* Mocks */,
-				1E5CBEAD289907A600DB5A9D /* TileRepositoryTests.swift */,
 			);
 			path = TileFeedTests;
 			sourceTree = "<group>";
@@ -133,6 +151,7 @@
 		1E5CBEB4289907B900DB5A9D /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				1EF7905A289BA8A700C34A83 /* Infrastructure */,
 				1E5CBEC02899176200DB5A9D /* Domain */,
 				1E5CBEBB28990B9B00DB5A9D /* Data */,
 				1E5CBEB72899080C00DB5A9D /* BaseMock.swift */,
@@ -155,6 +174,9 @@
 			isa = PBXGroup;
 			children = (
 				1E5CBEC12899177400DB5A9D /* TileMocks.swift */,
+				1EF7905F289BAA1900C34A83 /* TileRepositoryMock.swift */,
+				1EC40426289BCAB10008AE8A /* GetTilesUseCaseMock.swift */,
+				1EC40428289BD04E0008AE8A /* AddCartItemUseCaseMock.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -368,6 +390,51 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		1EC40423289BC9570008AE8A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1EC40424289BCA9A0008AE8A /* TileListViewModelTests.swift */,
+				1EC4042A289BD0C50008AE8A /* TileDetailViewModelTests.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1EC4042C289BD4A70008AE8A /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				1EC4042D289BD4B80008AE8A /* DateUtilsTests.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		1EF7905A289BA8A700C34A83 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				1EF79058289BA89900C34A83 /* DateMocks.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		1EF7905B289BA8B800C34A83 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				1EC4042C289BD4A70008AE8A /* Infrastructure */,
+				1EC40423289BC9570008AE8A /* Presentation */,
+				1EF7905C289BA8BC00C34A83 /* Domain */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		1EF7905C289BA8BC00C34A83 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				1E5CBEAD289907A600DB5A9D /* TileRepositoryTests.swift */,
+				1EF7905D289BA9ED00C34A83 /* AddCartItemUseCaseTests.swift */,
+				1EF79061289BAD2000C34A83 /* GetTilesUseCaseTests.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		211A7E4435051B1FECF89E59 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -529,13 +596,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EF7905E289BA9ED00C34A83 /* AddCartItemUseCaseTests.swift in Sources */,
+				1EC4042E289BD4B80008AE8A /* DateUtilsTests.swift in Sources */,
 				1E5CBEC22899177400DB5A9D /* TileMocks.swift in Sources */,
 				1E5CBEAE289907A600DB5A9D /* TileRepositoryTests.swift in Sources */,
 				1E5CBEBA28990A9600DB5A9D /* CoreDataSourceMock.swift in Sources */,
 				1E5CBEBD28990C7400DB5A9D /* CoreDataMocks.swift in Sources */,
 				1E5CBEB6289907C800DB5A9D /* AlamofireDataSourceMock.swift in Sources */,
+				1EF79059289BA89900C34A83 /* DateMocks.swift in Sources */,
+				1EC40427289BCAB10008AE8A /* GetTilesUseCaseMock.swift in Sources */,
+				1EC40429289BD04E0008AE8A /* AddCartItemUseCaseMock.swift in Sources */,
+				1EF79060289BAA1900C34A83 /* TileRepositoryMock.swift in Sources */,
+				1EC40425289BCA9A0008AE8A /* TileListViewModelTests.swift in Sources */,
 				1E5CBEBF2899127A00DB5A9D /* APIMocks.swift in Sources */,
 				1E5CBEB82899080C00DB5A9D /* BaseMock.swift in Sources */,
+				1EF79062289BAD2000C34A83 /* GetTilesUseCaseTests.swift in Sources */,
+				1EC4042B289BD0C50008AE8A /* TileDetailViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

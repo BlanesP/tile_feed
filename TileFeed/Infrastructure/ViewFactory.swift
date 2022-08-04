@@ -34,7 +34,8 @@ private extension ViewFactory {
         static var tileRepository: TileRepository {
             TileRepositoryImpl(
                 alamofireDataSource: AlamofireDataSourceImpl(),
-                coreDataSource: CoreDataSourceImpl()
+                coreDataSource: CoreDataSourceImpl(),
+                userDefaults: UserDefaults.standard
             )
         }
 
