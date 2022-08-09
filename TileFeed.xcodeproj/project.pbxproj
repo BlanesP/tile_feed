@@ -53,6 +53,8 @@
 		1EF7905E289BA9ED00C34A83 /* AddCartItemUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7905D289BA9ED00C34A83 /* AddCartItemUseCaseTests.swift */; };
 		1EF79060289BAA1900C34A83 /* TileRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7905F289BAA1900C34A83 /* TileRepositoryMock.swift */; };
 		1EF79062289BAD2000C34A83 /* GetTilesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF79061289BAD2000C34A83 /* GetTilesUseCaseTests.swift */; };
+		1EF9DFB528A22AD000D69122 /* TileListViewModelIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF9DFB428A22AD000D69122 /* TileListViewModelIntegrationTests.swift */; };
+		1EF9DFB728A22CFA00D69122 /* TileDetailViewModelIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF9DFB628A22CFA00D69122 /* TileDetailViewModelIntegrationTests.swift */; };
 		6EE579BD635FCBEB90F752A5 /* Pods_TileFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F65E71884616EF3D00D5564 /* Pods_TileFeed.framework */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +118,8 @@
 		1EF7905D289BA9ED00C34A83 /* AddCartItemUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCartItemUseCaseTests.swift; sourceTree = "<group>"; };
 		1EF7905F289BAA1900C34A83 /* TileRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileRepositoryMock.swift; sourceTree = "<group>"; };
 		1EF79061289BAD2000C34A83 /* GetTilesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTilesUseCaseTests.swift; sourceTree = "<group>"; };
+		1EF9DFB428A22AD000D69122 /* TileListViewModelIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileListViewModelIntegrationTests.swift; sourceTree = "<group>"; };
+		1EF9DFB628A22CFA00D69122 /* TileDetailViewModelIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileDetailViewModelIntegrationTests.swift; sourceTree = "<group>"; };
 		D0473985DB08F0FEEEDD3BCC /* Pods-TileFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TileFeed.release.xcconfig"; path = "Target Support Files/Pods-TileFeed/Pods-TileFeed.release.xcconfig"; sourceTree = "<group>"; };
 		D84264D79DC3AE2F285ED7D7 /* Pods-TileFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TileFeed.debug.xcconfig"; path = "Target Support Files/Pods-TileFeed/Pods-TileFeed.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +146,7 @@
 		1E5CBEAC289907A600DB5A9D /* TileFeedTests */ = {
 			isa = PBXGroup;
 			children = (
+				1EF9DFB328A22A7E00D69122 /* IntegrationTests */,
 				1EF7905B289BA8B800C34A83 /* UnitTests */,
 				1E5CBEB4289907B900DB5A9D /* Mocks */,
 			);
@@ -435,6 +440,15 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		1EF9DFB328A22A7E00D69122 /* IntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				1EF9DFB428A22AD000D69122 /* TileListViewModelIntegrationTests.swift */,
+				1EF9DFB628A22CFA00D69122 /* TileDetailViewModelIntegrationTests.swift */,
+			);
+			path = IntegrationTests;
+			sourceTree = "<group>";
+		};
 		211A7E4435051B1FECF89E59 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -606,8 +620,10 @@
 				1EF79059289BA89900C34A83 /* DateMocks.swift in Sources */,
 				1EC40427289BCAB10008AE8A /* GetTilesUseCaseMock.swift in Sources */,
 				1EC40429289BD04E0008AE8A /* AddCartItemUseCaseMock.swift in Sources */,
+				1EF9DFB728A22CFA00D69122 /* TileDetailViewModelIntegrationTests.swift in Sources */,
 				1EF79060289BAA1900C34A83 /* TileRepositoryMock.swift in Sources */,
 				1EC40425289BCA9A0008AE8A /* TileListViewModelTests.swift in Sources */,
+				1EF9DFB528A22AD000D69122 /* TileListViewModelIntegrationTests.swift in Sources */,
 				1E5CBEBF2899127A00DB5A9D /* APIMocks.swift in Sources */,
 				1E5CBEB82899080C00DB5A9D /* BaseMock.swift in Sources */,
 				1EF79062289BAD2000C34A83 /* GetTilesUseCaseTests.swift in Sources */,

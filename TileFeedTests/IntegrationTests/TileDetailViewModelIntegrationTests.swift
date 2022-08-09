@@ -1,21 +1,35 @@
 //
-//  TileDetailViewModelTests.swift
+//  TileDetailViewModelIntegrationTests.swift
 //  TileFeedTests
 //
-//  Created by Pau Blanes on 4/8/22.
+//  Created by Pau Blanes on 9/8/22.
 //
 
 import Combine
+import CoreData
 import XCTest
 @testable import TileFeed
 
-class TileDetailViewModelTests: XCTestCase {
+class TileDetailViewModelIntegrationTests: XCTestCase {
 
     private var cancellables = Set<AnyCancellable>()
-    private let useCase = AddCartItemUseCaseMock()
+    private let alamofireDataSource = AlamofireDataSourceMock()
+    private let context = NSManagedObjectContext.mock
+    private lazy var coreDataSource = CoreDataSourceMock(context: context)
+    private lazy var userDefaults: UserDefaults = {
+        let userDefaults = UserDefaults(suiteName: "TestDefaults")!
+        userDefaults.removePersistentDomain(forName: "TestDefaults")
+        return userDefaults
+    }()
     private lazy var viewModel = TileDetailViewModel(
         tile: ShoppingTile.mock,
-        addCartItemUC: useCase,
+        addCartItemUC: AddCartItemUseCaseImpl(
+            repository: TileRepositoryImpl(
+                alamofireDataSource: alamofireDataSource,
+                coreDataSource: coreDataSource,
+                userDefaults: userDefaults
+            )
+        ),
         onTileChanged: nil
     )
 
@@ -27,9 +41,9 @@ class TileDetailViewModelTests: XCTestCase {
     func testAddCartItemSuccess() async throws {
         //Given
         let newItem = "New item"
-        var expectedResult = ShoppingTile.mock
-        expectedResult.cartItems.append(newItem)
-        useCase.result = expectedResult
+        let fetchedEntity = ShoppingTileEntity.mock(with: context)
+        coreDataSource.actionParams = fetchedEntity
+        coreDataSource.result = fetchedEntity
         XCTAssertFalse((viewModel.tile as! ShoppingTile).cartItems.contains(newItem))
 
         //When
@@ -43,7 +57,8 @@ class TileDetailViewModelTests: XCTestCase {
 
     func testAddCartItemFailure() {
         //Given
-        useCase.result = BasicError(message: "")
+        let newItem = "New item"
+        coreDataSource.result = BasicError(message: "")
         let expectation = self.expectation(description: "failure")
         var result: TileDetailViewModel.ViewOutput?
 
@@ -55,11 +70,13 @@ class TileDetailViewModelTests: XCTestCase {
             )
             .store(in: &cancellables)
 
-        viewModel.input(.addCartItem("Test item"))
+        viewModel.input(.addCartItem(newItem))
 
         waitForExpectations(timeout: 0.1)
 
         //Then
         XCTAssertEqual(result, .error)
+        XCTAssertFalse((viewModel.tile as! ShoppingTile).cartItems.contains(newItem))
     }
+
 }
