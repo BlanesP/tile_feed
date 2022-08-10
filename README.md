@@ -5,5 +5,6 @@ Tech project to test various iOS frameworks. Mainly focused on:
 - SwiftUI + Combine
 - Clean Architecture + MVVM
 - Unit, integration and UI testing
+- CI with Github Actions
 
 I am also working on [this other project](https://github.com/BlanesP/simple_investment_tracker) which I published to the app store.
