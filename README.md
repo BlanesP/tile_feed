@@ -6,5 +6,6 @@ Tech project to test various iOS frameworks. Mainly focused on:
 - Clean Architecture + MVVM
 - Unit testing
 - Integration testing
+- UI testing
 
 I am also working on [this other project](https://github.com/BlanesP/simple_investment_tracker) which I published to the app store.

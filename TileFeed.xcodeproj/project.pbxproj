@@ -49,6 +49,8 @@
 		1EC40429289BD04E0008AE8A /* AddCartItemUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC40428289BD04E0008AE8A /* AddCartItemUseCaseMock.swift */; };
 		1EC4042B289BD0C50008AE8A /* TileDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4042A289BD0C50008AE8A /* TileDetailViewModelTests.swift */; };
 		1EC4042E289BD4B80008AE8A /* DateUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4042D289BD4B80008AE8A /* DateUtilsTests.swift */; };
+		1ED8605A28A37B590008F7A8 /* TileFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8605928A37B590008F7A8 /* TileFeedUITests.swift */; };
+		1ED8605C28A37B590008F7A8 /* TileFeedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8605B28A37B590008F7A8 /* TileFeedUITestsLaunchTests.swift */; };
 		1EF79059289BA89900C34A83 /* DateMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF79058289BA89900C34A83 /* DateMocks.swift */; };
 		1EF7905E289BA9ED00C34A83 /* AddCartItemUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7905D289BA9ED00C34A83 /* AddCartItemUseCaseTests.swift */; };
 		1EF79060289BAA1900C34A83 /* TileRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7905F289BAA1900C34A83 /* TileRepositoryMock.swift */; };
@@ -65,6 +67,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1E7192092892DAB200C3EE8F;
 			remoteInfo = PayBackChallenge;
+		};
+		1ED8605D28A37B590008F7A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E7192022892DAB200C3EE8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E7192092892DAB200C3EE8F;
+			remoteInfo = TileFeed;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -114,6 +123,9 @@
 		1EC40428289BD04E0008AE8A /* AddCartItemUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCartItemUseCaseMock.swift; sourceTree = "<group>"; };
 		1EC4042A289BD0C50008AE8A /* TileDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileDetailViewModelTests.swift; sourceTree = "<group>"; };
 		1EC4042D289BD4B80008AE8A /* DateUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtilsTests.swift; sourceTree = "<group>"; };
+		1ED8605728A37B590008F7A8 /* TileFeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TileFeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ED8605928A37B590008F7A8 /* TileFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileFeedUITests.swift; sourceTree = "<group>"; };
+		1ED8605B28A37B590008F7A8 /* TileFeedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileFeedUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1EF79058289BA89900C34A83 /* DateMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateMocks.swift; sourceTree = "<group>"; };
 		1EF7905D289BA9ED00C34A83 /* AddCartItemUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCartItemUseCaseTests.swift; sourceTree = "<group>"; };
 		1EF7905F289BAA1900C34A83 /* TileRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileRepositoryMock.swift; sourceTree = "<group>"; };
@@ -137,6 +149,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EE579BD635FCBEB90F752A5 /* Pods_TileFeed.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ED8605428A37B590008F7A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +285,7 @@
 			children = (
 				1E71920C2892DAB200C3EE8F /* TileFeed */,
 				1E5CBEAC289907A600DB5A9D /* TileFeedTests */,
+				1ED8605828A37B590008F7A8 /* TileFeedUITests */,
 				1E71920B2892DAB200C3EE8F /* Products */,
 				211A7E4435051B1FECF89E59 /* Pods */,
 				B61682169A324EB24DB922A5 /* Frameworks */,
@@ -277,6 +297,7 @@
 			children = (
 				1E71920A2892DAB200C3EE8F /* TileFeed.app */,
 				1E5CBEAB289907A600DB5A9D /* TileFeedTests.xctest */,
+				1ED8605728A37B590008F7A8 /* TileFeedUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -412,6 +433,15 @@
 			path = Infrastructure;
 			sourceTree = "<group>";
 		};
+		1ED8605828A37B590008F7A8 /* TileFeedUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1ED8605928A37B590008F7A8 /* TileFeedUITests.swift */,
+				1ED8605B28A37B590008F7A8 /* TileFeedUITestsLaunchTests.swift */,
+			);
+			path = TileFeedUITests;
+			sourceTree = "<group>";
+		};
 		1EF7905A289BA8A700C34A83 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
@@ -506,6 +536,24 @@
 			productReference = 1E71920A2892DAB200C3EE8F /* TileFeed.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1ED8605628A37B590008F7A8 /* TileFeedUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ED8606128A37B590008F7A8 /* Build configuration list for PBXNativeTarget "TileFeedUITests" */;
+			buildPhases = (
+				1ED8605328A37B590008F7A8 /* Sources */,
+				1ED8605428A37B590008F7A8 /* Frameworks */,
+				1ED8605528A37B590008F7A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1ED8605E28A37B590008F7A8 /* PBXTargetDependency */,
+			);
+			name = TileFeedUITests;
+			productName = TileFeedUITests;
+			productReference = 1ED8605728A37B590008F7A8 /* TileFeedUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -522,6 +570,10 @@
 					};
 					1E7192092892DAB200C3EE8F = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					1ED8605628A37B590008F7A8 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 1E7192092892DAB200C3EE8F;
 					};
 				};
 			};
@@ -540,6 +592,7 @@
 			targets = (
 				1E7192092892DAB200C3EE8F /* TileFeed */,
 				1E5CBEAA289907A600DB5A9D /* TileFeedTests */,
+				1ED8605628A37B590008F7A8 /* TileFeedUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -558,6 +611,13 @@
 			files = (
 				1E7192152892DAB300C3EE8F /* Preview Assets.xcassets in Resources */,
 				1E7192122892DAB300C3EE8F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ED8605528A37B590008F7A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,6 +726,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1ED8605328A37B590008F7A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ED8605C28A37B590008F7A8 /* TileFeedUITestsLaunchTests.swift in Sources */,
+				1ED8605A28A37B590008F7A8 /* TileFeedUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -673,6 +742,11 @@
 			isa = PBXTargetDependency;
 			target = 1E7192092892DAB200C3EE8F /* TileFeed */;
 			targetProxy = 1E5CBEAF289907A600DB5A9D /* PBXContainerItemProxy */;
+		};
+		1ED8605E28A37B590008F7A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E7192092892DAB200C3EE8F /* TileFeed */;
+			targetProxy = 1ED8605D28A37B590008F7A8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -891,6 +965,42 @@
 			};
 			name = Release;
 		};
+		1ED8605F28A37B590008F7A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 59R43C6437;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paublanes.TileFeedUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TileFeed;
+			};
+			name = Debug;
+		};
+		1ED8606028A37B590008F7A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 59R43C6437;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paublanes.TileFeedUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TileFeed;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -917,6 +1027,15 @@
 			buildConfigurations = (
 				1E7192192892DAB300C3EE8F /* Debug */,
 				1E71921A2892DAB300C3EE8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ED8606128A37B590008F7A8 /* Build configuration list for PBXNativeTarget "TileFeedUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ED8605F28A37B590008F7A8 /* Debug */,
+				1ED8606028A37B590008F7A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

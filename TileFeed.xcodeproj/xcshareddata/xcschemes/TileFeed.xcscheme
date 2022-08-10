@@ -38,6 +38,16 @@
                ReferencedContainer = "container:TileFeed.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1ED8605628A37B590008F7A8"
+               BuildableName = "TileFeedUITests.xctest"
+               BlueprintName = "TileFeedUITests"
+               ReferencedContainer = "container:TileFeed.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

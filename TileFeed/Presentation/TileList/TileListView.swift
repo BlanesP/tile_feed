@@ -78,6 +78,7 @@ struct TileListView: View {
                     )
                     .opacity(0)
                 )
+                .accessibilityIdentifier(tile.title ?? "")
         }
         .listStyle(.plain)
     }
