@@ -14,7 +14,6 @@ class TileFeedUITests: XCTestCase {
     override func setUpWithError() throws {
         continueAfterFailure = false
         XCUIDevice.shared.orientation = .portrait
-        app.launch()
     }
 
     func testTitle() {
@@ -24,10 +23,22 @@ class TileFeedUITests: XCTestCase {
     }
 
     func testNavigation() {
-        let tile = app.tables.buttons["iPhone"]
+        app.launch()
+
+        let tile = app.tables.buttons.element(boundBy: 0)
         XCTAssert(tile.exists)
-        tile.tap()
+        tile.tapUnhittable() //Needed to avoid random isHittable == false
 
         app.navigationBars.buttons["Welcome back!"].tap()
+    }
+}
+
+//MARK: - Utils
+
+extension XCUIElement {
+    func tapUnhittable() {
+        XCTContext.runActivity(named: "Tap \(self) by coordinate") { _ in
+            coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
+        }
     }
 }

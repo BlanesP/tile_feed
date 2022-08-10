@@ -51,7 +51,6 @@
 		1EC4042B289BD0C50008AE8A /* TileDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4042A289BD0C50008AE8A /* TileDetailViewModelTests.swift */; };
 		1EC4042E289BD4B80008AE8A /* DateUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4042D289BD4B80008AE8A /* DateUtilsTests.swift */; };
 		1ED8605A28A37B590008F7A8 /* TileFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8605928A37B590008F7A8 /* TileFeedUITests.swift */; };
-		1ED8605C28A37B590008F7A8 /* TileFeedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8605B28A37B590008F7A8 /* TileFeedUITestsLaunchTests.swift */; };
 		1EF79059289BA89900C34A83 /* DateMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF79058289BA89900C34A83 /* DateMocks.swift */; };
 		1EF7905E289BA9ED00C34A83 /* AddCartItemUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7905D289BA9ED00C34A83 /* AddCartItemUseCaseTests.swift */; };
 		1EF79060289BAA1900C34A83 /* TileRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7905F289BAA1900C34A83 /* TileRepositoryMock.swift */; };
@@ -124,7 +123,6 @@
 		1EC4042D289BD4B80008AE8A /* DateUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtilsTests.swift; sourceTree = "<group>"; };
 		1ED8605728A37B590008F7A8 /* TileFeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TileFeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED8605928A37B590008F7A8 /* TileFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileFeedUITests.swift; sourceTree = "<group>"; };
-		1ED8605B28A37B590008F7A8 /* TileFeedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileFeedUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1EF79058289BA89900C34A83 /* DateMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateMocks.swift; sourceTree = "<group>"; };
 		1EF7905D289BA9ED00C34A83 /* AddCartItemUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCartItemUseCaseTests.swift; sourceTree = "<group>"; };
 		1EF7905F289BAA1900C34A83 /* TileRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileRepositoryMock.swift; sourceTree = "<group>"; };
@@ -432,7 +430,6 @@
 			isa = PBXGroup;
 			children = (
 				1ED8605928A37B590008F7A8 /* TileFeedUITests.swift */,
-				1ED8605B28A37B590008F7A8 /* TileFeedUITestsLaunchTests.swift */,
 			);
 			path = TileFeedUITests;
 			sourceTree = "<group>";
@@ -670,7 +667,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ED8605C28A37B590008F7A8 /* TileFeedUITestsLaunchTests.swift in Sources */,
 				1ED8605A28A37B590008F7A8 /* TileFeedUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
