@@ -14,19 +14,18 @@ class TileFeedUITests: XCTestCase {
     override func setUpWithError() throws {
         continueAfterFailure = false
         XCUIDevice.shared.orientation = .portrait
+        app.launch()
     }
 
     func testTitle() {
         let welcome = app.staticTexts["Welcome back!"]
 
-        XCTAssert(welcome.exists)
+        XCTAssert(welcome.waitForExistence(timeout: 10))
     }
 
     func testNavigation() {
-        app.launch()
-
-        let tile = app.tables.buttons.element(boundBy: 0)
-        XCTAssert(tile.exists)
+        let tile = app.tables.buttons.firstMatch
+        XCTAssert(tile.waitForExistence(timeout: 10))
         tile.tapUnhittable() //Needed to avoid random isHittable == false
 
         app.navigationBars.buttons["Welcome back!"].tap()
