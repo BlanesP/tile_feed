@@ -1,19 +1,19 @@
-name: Xcode - Build Analyze Test
+name: Swift
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 jobs:
   build:
-    name: Build and analyze and test using xcodebuild command
+
     runs-on: macos-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Build
-        run: |
-          xcodebuild clean build analyze test -scheme TileFeed -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11' 
+    - uses: actions/checkout@v3
+    - name: Build
+      run: xcodebuild build -v
+    - name: Run tests
+      run: xcodebuild test -v
